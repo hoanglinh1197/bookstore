@@ -1,0 +1,50 @@
+.pr-description-container{
+    padding: 1em 1em;
+    position: relative;
+    box-shadow:0 2px 4px 0 rgba(90, 87, 87, 0.2), 0 6px 20px 0 rgba(108, 105, 105, 0.19);
+}
+
+.pr-description-title p{
+    text-decoration: underline;
+    text-underline-offset: 6px
+}
+
+.pr-description-ct {
+  position: relative;
+  max-height: 330px;
+  overflow: hidden;
+  padding: 1em 0;
+  transition: max-height 0.3s ease;
+}
+
+.pr-description-ct.expanded {
+  max-height: 1000px; /* đủ lớn */
+}
+
+/* hiệu ứng mờ phía dưới khi bị cắt */
+.pr-description-ct::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to bottom, transparent, white);
+}
+
+/* Khi expanded thì bỏ fade */
+.pr-description-ct.expanded::after {
+  display: none;
+}
+
+.desc-btn {
+  margin-top: 10px;
+  border: 1px solid greenyellow;
+  color: rgb(23, 222, 33);
+  cursor: pointer;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}

@@ -1,0 +1,44 @@
+ghn:
+ token: ed36dae8-5d54-11f1-9fe0-52a230f8244e
+ shop-id: 6466452
+ base-url: https://online-gateway.ghn.vn
+ 
+ from-district-id: 1451
+ from-ward-code: 20908
+spring:
+  application:
+    name: bookstore
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Bookstore
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  security:
+    oauth2:
+      client:
+       registration:
+        google:
+          client-id: 269902270821-e98jii9d4snhqsv3c3tgvt4tjg2ij5lm.apps.googleusercontent.com
+          client-secret: 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
+          scope: openid, profile, email
+          redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+        facebook:
+          client-id: YOUR_FACEBOOK_APP_ID
+          client-secret: YOUR_FACEBOOK_APP_SECRET
+          scope: public_profile,email
+          redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+        provider:
+          facebook:
+            authorization-uri: https://www.facebook.com/v14.0/dialog/oauth
+            token-uri: https://graph.facebook.com/v14.0/oauth/access_token
+            user-info-uri: https://graph.facebook.com/me?fields=id,name,email

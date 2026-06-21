@@ -1,0 +1,75 @@
+.ss-popup-od-container{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    box-shadow: 0 4px 8px 0 rgba(90, 87, 87, 0.2), 0 6px 20px 0 rgba(108, 105, 105, 0.19);
+
+}
+
+.ss-popup-od-header{
+    display: flex;
+    flex-direction: column;
+    padding: 2em 10em;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(45deg, rgb(170, 166, 166), rgb(121, 121, 233));
+}
+
+.ss-popup-od-header .ss-popup-od-title,
+.ss-popup-od-header .ss-popup-od-fee{
+    color: white;
+    font-size: large;
+    font-weight: 500;
+}
+
+.ss-popup-od-body{
+    display: flex;
+    flex-direction: column;
+    padding: 2em 1em;
+}
+
+.ss-popup-od-mt-pm-container,
+.ss-popup-od-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ss-popup-od-mt-pm-container{
+    border-bottom: 1px solid rgb(194, 192, 192);
+    padding: 10px 0;
+}
+.ss-popup-od-total{
+    padding-top: 10px;
+}
+
+.ss-popup-od-mt-pm-container .ss-popup-od-mt-pm,
+.ss-popup-od-total .ss-popup-od-total-title,
+.ss-popup-od-vat .ss-popup-od-vat-detail{
+    color: rgb(177, 175, 175);
+}
+
+.ss-popup-od-vat .ss-popup-od-vat-detail{
+    font-size: small;
+}
+
+.ss-popup-od-vat{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ss-popup-od-footer{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding-bottom: 1em;
+}
+
+.ss-popup-od-footer button{
+    outline: none;
+    border: 1px solid rgb(83, 101, 244);
+    padding: 5px 5em;
+    background-color: white;
+    color: rgb(83, 101, 244);
+    font-weight: 500;
+}

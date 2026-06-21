@@ -1,0 +1,149 @@
+
+.slider-container {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 3em 1em;
+  gap: 1em;
+  background: linear-gradient(45deg, rgb(170, 166, 166), rgb(121, 121, 233));
+  
+}
+
+.slider-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-title .sl-title-left {
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-title .sl-title-left .title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+}
+
+.slider-title .discount-time,
+.slider-title .sl-title-right .moving {
+  display: flex;
+  gap: 5px;
+  padding: 5px 5px;
+}
+
+.slider-title .discount-time button {
+  background-color: rgb(210, 239, 96);
+  border: none;
+}
+
+.slider-title .sl-title-right .moving button {
+  width: 30px;
+  aspect-ratio: 1/1;
+  font-size: 15px;
+  border: none;
+  border-radius: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.slider-title .sl-title-right .moving button:hover {
+  background-color: rgb(25, 240, 25);
+  color: aliceblue;
+}
+
+.circle-wrapper {
+  position: relative;
+  padding: 5px 5px;
+  margin: 0 0;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* 🔵 vòng trong - KHÔNG animation */
+.inner-circle {
+  width: 100%;
+  height: 100%;
+  background: rgb(214, 208, 27);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+}
+
+/* 🟡 vòng ngoài - CHỈ cái này chạy */
+.outer-circle {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(224, 244, 70);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  animation: ripple 1s ease-in infinite;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  70% {
+    transform: scale(3);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.slider-title .sl-title-left .title p {
+  font-size: large;
+  font-weight: 1000;
+  margin: 0 0;
+}
+
+.slider-tilte .moving {
+  align-items: right;
+}
+
+
+.slider-ct-container {
+  display: flex;
+  width: 100% ;
+  background-color: aliceblue;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.slider-ct-container::-webkit-scrollbar {
+  display: none; 
+}
+
+.slider-ct {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 1em;
+  background-color: aliceblue;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+
+.book-img img {
+  width: 100%;
+  height: 200px;
+  box-sizing: border-box;
+}
+
+.slider-ct .card-container{
+  flex-shrink: 0;
+  width: 250px !important;
+  min-width: 0;
+}

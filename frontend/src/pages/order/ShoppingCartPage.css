@@ -1,0 +1,69 @@
+.sc-container .body {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 1em 5em;
+}
+
+.left .mainCart-detail {
+  padding: 1em 1em;
+  box-shadow:
+    0 2px 4px 0 rgba(90, 87, 87, 0.2),
+    0 6px 20px 0 rgba(108, 105, 105, 0.19);
+}
+
+.mainCart-detail .title-number-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mainCart-detail .title-number-cart .title-card {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2em;
+  align-items: center;
+}
+
+.mainCart-detail .title-number-cart .title-card button {
+  background-color: rgb(49, 106, 240);
+  padding: 5px 10px;
+  border-radius: 10%;
+  color: white;
+  border: 1px solid rgb(49, 106, 240);
+}
+
+.mainCart-detail h5 {
+  border-bottom: 1px dashed grey;
+}
+
+.lineItem-container {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  gap: 5px;
+  overflow-y: auto;
+}
+
+.right {
+  top: 200px;
+}
+
+.delete-popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); /* làm mờ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-successful-container{
+background: white;
+  padding: 30px;
+  border-radius: 10px;
+  z-index: 1000;
+}

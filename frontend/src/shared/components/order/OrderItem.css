@@ -1,0 +1,69 @@
+.order-item-content{
+    display: grid;
+    grid-template-columns: 10fr 1fr 1fr;
+    justify-content: center;
+    border: 1px solid rgb(250, 245, 245);
+}
+
+.order-item-content .order-book-img-container{
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    padding: 5px 20px;
+    gap: 1em;
+    width: 100%;
+    min-width: 0;
+}
+
+.order-item-content .order-book-img-container .order-book-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(213, 209, 209);
+    width: 100%;
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+}
+
+.order-item-content .order-book-img img{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    width: 65%;
+    height: 90px;
+}
+
+.order-item-content .order-book-img .book-quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(209, 209, 212);
+    position: absolute;
+    width: 30%;
+    height: 25px;
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 30%;
+}
+
+.order-item-content .order-book-img .book-quantity .quantity{
+    font-size: small;
+}
+
+.order-book-info-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.order-book-info-container .book-title{
+    font-size: medium;
+    font-weight: 500;
+}
+
+.order-book-info-container .shop-name{
+    color: rgb(145, 145, 154);
+    font-size: medium;
+    font-weight: 300;
+}

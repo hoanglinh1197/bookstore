@@ -1,0 +1,26 @@
+.listBook,
+.listBook .listBook-wrapper {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.listBook .listBook-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.listBook .listBook-title {
+  font-size: 25px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.book-img img {
+  height: 220px;
+  padding: 5px 20px;
+  box-sizing: border-box;
+}

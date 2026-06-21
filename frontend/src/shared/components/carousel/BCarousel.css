@@ -1,0 +1,116 @@
+/* @media (max-width: 768px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    margin: 0 8px;
+  }
+} */
+
+.section-main {
+  display: grid;
+  grid-template-columns: 4fr 1.5fr;
+  margin: 1em auto;
+  padding: 2em 2em;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* chỉ hiển thị 1 ảnh */
+  height: 100%;
+}
+
+.carousel-container:hover .btn-prev,
+.carousel-container:hover .btn-next {
+  opacity: 1; /* độ trong suốt */
+  pointer-events: auto; /* bật lại sự kiện chuột*/
+}
+
+.c-container{
+  display: flex;
+  width: 100%;
+  height: 80%;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.right-banner {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.rbanner-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 100%;
+  width: 100%;
+  gap: 1px;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.rbanner-container img{
+  object-fit: cover;
+}
+
+
+
+.img-container {
+  display: flex;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s ease;  
+}
+
+
+.img-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  width: 100%;
+  flex: 0 0 100%; /* QUAN TRỌNG */
+  object-fit: cover;
+}
+
+.btn-prev,
+.btn-next {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 40%;
+  transform: translateY(25%);
+  
+  background: rgba(227, 221, 221, 0.5);
+  color: rgb(213, 236, 44);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* trái */
+.btn-prev {
+  left: 0;
+}
+
+/* phải */
+.btn-next {
+  right: 0;
+
+}
+
+.icon-arrow {
+  font-size: 25px;
+}
+
+.rb-card {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5px;
+}

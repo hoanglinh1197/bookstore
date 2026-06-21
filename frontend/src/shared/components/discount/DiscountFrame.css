@@ -1,0 +1,78 @@
+.discFr-countainer {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.discFr-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1em;
+  width: 100%;
+  height: 100%;
+}
+
+.discFr-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.discFr-title{
+    font-size: large;
+    font-weight: 500;
+}
+
+.closing-discFr-container{
+    padding: 1px 1.5px;
+    border-radius: 10%;
+}
+
+.closing-discFr-container:hover{
+    background-color: black;
+    color: white;
+}
+
+.closing-discFr{
+
+}
+
+.discount-search-area {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1em 0;
+  position: relative;
+}
+
+.discount-search {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.discount-search input {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px 2em;
+  outline: none;
+  width: 80%;
+  border: 1px solid rgb(200, 199, 199);
+}
+
+.icon-discount {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 2px 2px;
+}
+
+.discount-submit {
+  padding: 5px 5px;
+  border-style: none;
+  background-color: rgb(76, 210, 105);
+  color: white;
+  height: 100%;
+}

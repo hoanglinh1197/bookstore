@@ -1,0 +1,234 @@
+.pr-dt-wrapper {
+  
+}
+
+.pr-dt-container{
+  width: 100%;
+  padding: 1em 2em;
+  box-shadow:0 2px 4px 0 rgba(90, 87, 87, 0.2), 0 6px 20px 0 rgba(108, 105, 105, 0.19);
+
+}
+
+.pr-dt-inf {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  width: 100%;
+  padding: 1em 1em;
+  gap: 1em;
+}
+
+.pr-dt-img {
+  display: flex;
+  justify-items: flex-end;
+  object-fit: cover;
+  border: 0;
+  margin: 0;
+}
+
+.pr-dt-img img {
+  height: 70%;
+  min-height: 0;
+}
+
+.area-inf {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  min-width: 0;
+  gap: 5px;
+}
+
+.pr-inf {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pr-inf .pr-title {
+  font-size: larger;
+  font-weight: 500;
+}
+
+.pr-inf p {
+  margin: 0;
+  font-size: medium;
+}
+
+.pr-inf .status {
+  display: flex;
+  gap: 2em;
+  margin: 0;
+}
+
+.pr-inf .status .result {
+  font-weight: 100;
+  color: green;
+}
+
+.pr-flex-wrap {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1em;
+}
+
+.wrapbox-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.wrapbox-detail .price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: larger;
+  padding: 5px 5px;
+  background-color: rgb(210, 212, 213);
+}
+
+.wrapbox-detail .price .price-title {
+  font-size: medium;
+  color: black;
+}
+
+.wrapbox-detail .price .new-price {
+  font-size: larger;
+  font-weight: 1000;
+}
+
+.wrapbox-detail .price .old-price {
+  font-size: large;
+  text-decoration: line-through;
+  color: rgb(118, 116, 116);
+}
+
+.wrapbox-detail .price .discount {
+  font-size: medium;
+  padding: 1px 5px;
+  border: 1px solid red;
+}
+
+.wrapbox-detail .quantity {
+  display: flex;
+  justify-content: flex-start;
+  gap: 4em;
+}
+
+.quantity .title {
+  margin: 0;
+}
+
+.quantity .gr-buttn {
+  display: flex;
+  justify-content: flex-start;
+  gap:10px;
+}
+
+.quantity .gr-buttn button {
+  width: 5ch;
+  outline: none;
+  white-space: nowrap;
+  border: 0;
+}
+
+.quantity .gr-buttn input::-webkit-outer-spin-button,
+.quantity .gr-buttn input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.quantity .gr-buttn input{
+  width: 3ch;
+  min-height: 0;
+  border: none;
+  outline: none;
+}
+
+.wrapbox-delivery{
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+}
+
+.wrapbox-delivery button{
+  width: 50%;
+  outline: none;
+  border: 0;
+  padding: 5px;
+  border: 1px solid red;
+  font-weight: 500;
+}
+
+.wrapbox-delivery button.adding-product-btn{
+  color: red;
+}
+
+.wrapbox-delivery button.buying-btn{
+  background-color: red;
+  color: white;
+}
+
+.pr-toshare{
+  display: flex;
+  gap: 5px;
+}
+
+.pr-toshare .icon-tohare-container{
+  display: flex;
+  gap: 5px;
+}
+
+.pr-toshare .icon-tohare-container .icon-toshare{
+  padding: 2px 5px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.pr-toshare .icon-tohare-container .icon-toshare.fb{
+  background-color: rgb(6, 6, 167);
+  color: white;
+}
+
+.pr-toshare .icon-tohare-container .icon-toshare.twitter{
+  background-color: rgb(99, 144, 235);
+  color: white;
+}
+
+.pr-toshare .icon-tohare-container .icon-toshare.pin{
+  background-color: rgb(247, 54, 60);
+  color: white;
+}
+
+.pr-toshare .icon-tohare-container .icon-toshare.link45deg{
+  background-color: rgb(27, 26, 26);
+  color: white;
+}
+
+.wrapbox-detail-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 5px 10px;
+  box-shadow:0 2px 4px 0 rgba(90, 87, 87, 0.2), 0 6px 20px 0 rgba(108, 105, 105, 0.19);
+
+}
+
+.wrapbox-detail-right .title{
+  font-size: small;
+  font-weight: 500;
+  text-align: start;
+}
+
+.infoList-deliverly .delivery-item {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.infoList-deliverly .delivery-item img{
+  width: 65%;
+}
+
+.infoList-deliverly .delivery-item p{
+  font-size: small;
+  align-items: center;
+}

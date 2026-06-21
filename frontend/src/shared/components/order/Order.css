@@ -1,0 +1,79 @@
+.order-item-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1em 1em;
+    gap: 1em;
+    background-color: rgb(248, 245, 245);
+}
+
+.order-item-container .order-status .cancel-order-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.x-circle-fill-icon, .cancel-order-title{
+    color: rgb(131, 130, 130);
+    font-weight: 500;
+}
+
+
+.more-book-container{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.more-book-container button{
+    outline: none;
+    border: 1px solid rgb(231, 225, 225);
+    padding: 3px 5px;
+    background-color: white;
+    font-size: small;
+    color: grey;
+}
+
+.order-total-price-container .order-total-price{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+}
+
+.order-total-price-container .order-total-price span{
+    font-size: large;
+}
+
+.order-total-price-container .order-total-price .total-price-title{
+    color: grey;
+}
+.order-total-price-container .order-total-price .total-price{
+    font-weight: 450;
+}
+
+.order-total-price-container .more-infomation{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 0;
+    gap: 15px;
+}
+
+.order-total-price-container button{
+    outline: none;
+    border: 1px solid rgb(66, 117, 245);
+    color: rgb(66, 117, 245) ;
+    padding: 5px 10px;
+    background-color: white;
+}
+
+.order-item-container .order-status .cancel-order-container{
+    padding: 0.5em 0;
+    border-bottom: 1px solid rgb(225, 222, 222);
+}
+
+.order-item-container .more-book-container{
+    padding: 0.5em 0;
+    border-top: 1px solid rgb(225, 222, 222);
+}

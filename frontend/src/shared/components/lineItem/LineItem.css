@@ -1,0 +1,101 @@
+.shoppingcard-container {
+  display: grid;
+  grid-template-columns: 3fr 10fr 5fr 1fr;
+  padding: 1em 2em;
+  box-shadow:
+    0 2px 4px 0 rgba(90, 87, 87, 0.2),
+    0 6px 20px 0 rgba(108, 105, 105, 0.19);
+}
+
+.img-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+.selected-button {
+  display: flex;
+  flex: 1;
+  min-width: 20px;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.shoppingcard-container .img-container img {
+  max-width: 100px;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.shoppingcard-container .content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
+  justify-content: flex-start;
+}
+
+.shoppingcard-container .content p {
+  font-size: medium;
+  padding: 0;
+  margin: 0;
+}
+
+
+.shoppingcard-container .content .price {
+  display: flex;
+  gap: 2em;
+}
+
+.shoppingcard-container .content .price span:first-child {
+  text-decoration: line-through;
+}
+
+.shoppingcard-container .number {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.shoppingcard-container .number .book-quantity {
+  display: inline-flex;
+}
+
+.shoppingcard-container .number .book-quantity input {
+  width: 2ch;
+  min-width: 40px;
+  text-align: center;
+  border: none;
+}
+
+.shoppingcard-container .number .book-quantity button {
+  padding: 5px 10px;
+  border: none;
+}
+
+.shoppingcard-container .number .book-quantity button:hover {
+  background-color: black;
+  color: white;
+}
+
+.book-quantity .error-quantity{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.delete-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-container .delete-btn{
+  border: none;
+  background-color: transparent;
+  color: rgb(215, 215, 215);
+}
+
+.delete-container .delete-btn:hover{
+  color: black;
+}

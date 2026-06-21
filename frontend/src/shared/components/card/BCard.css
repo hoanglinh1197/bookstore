@@ -1,0 +1,122 @@
+.card-container{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 0.5px solid #ebe5e5;
+  font-family: Sans-serif;
+  outline: none;
+  gap: 1px;
+  box-shadow: 0 4px 8px 0 rgba(90, 87, 87, 0.2), 0 6px 20px 0 rgba(108, 105, 105, 0.19);
+}
+
+.book-img{
+  width: 100%;
+  height: 100%;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card-content{
+  display: flex;
+  height: 160px;
+  min-height: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 5px;
+  margin: 0;
+}
+
+.producer{
+  color: #645b5b;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.book-name{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 22px;
+  height: 44px;
+  word-wrap: break-word;
+  font-size: 15px;
+  margin: 1 0;
+}
+
+.price-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.price{
+  font-size: 15px;
+  color: red;
+}
+
+.price-del{
+  color: rgb(121, 113, 113);
+  font-size: 14px;
+  text-decoration: line-through;
+}
+.pro-sale{
+  color: white;
+  background-color: red;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight:500;
+  align-content: center;
+  justify-content: center;
+}
+
+.shopping-card-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 5px;
+}
+
+.shopping-card-container:hover{
+  background-image: linear-gradient(to bottom right, #108ef6,#e80aec);
+}
+
+.shopping-card-text{
+  margin: 0 5px;
+  font-size: 13px;
+}
+
+
+.cart-toast {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  animation: fly-up 1.5s forwards;
+}
+
+@keyframes fly-up {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0.5;
+  }
+
+  20% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-250px) scale(1.1);
+    opacity: 0;
+  }
+}

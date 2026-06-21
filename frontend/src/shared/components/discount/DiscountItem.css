@@ -1,0 +1,79 @@
+.discItem-frame{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 100%;
+    height: 130px;
+    min-height: 0;
+    box-shadow:0 2px 4px 0 rgba(90, 87, 87, 0.2), 0 6px 20px 0 rgba(108, 105, 105, 0.19);
+}
+
+.left-side{
+    display: flex;
+    background-color: #00ab55;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+}
+
+.left-side img{
+    width: 100%;
+    object-fit: cover;
+    min-width: 0;
+    min-height: 0;
+}
+
+.right-side{
+    display: flex;
+    width: 100%;
+    padding: 0 1em;
+    height: 100%;
+    min-height: 0;
+}
+
+.discount-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.discount-detail .top-area .head-area{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.discount-detail .top-area .body-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 0;
+
+}
+
+.discount-detail .bottom-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 0;
+
+}
+
+.discount-name{
+    font-size: large;
+    font-weight: 500;
+}
+
+.badge-title, .discount-notice, .discount-exp{
+    font-size: small;
+}
+
+.badge-title{
+    font-weight: 500;
+    padding: 2px 2px;
+    background-color: rgb(197, 194, 194);
+}

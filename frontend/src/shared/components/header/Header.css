@@ -1,0 +1,92 @@
+.header {
+  width: 100%;
+  height: 100%;
+  caret-color: transparent; /*khi click k thay con tro chuot*/
+}
+
+.top-area {
+  /* display: flex; */
+  align-items: center;
+  padding: 5px 0;
+  
+}
+
+.top-area-container {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+  padding: 0 5em;
+}
+
+.top-area-container p {
+  font-size: smaller;
+  margin: 0;
+}
+
+.top-area-container .checking-cart a {
+  color: rgb(9, 9, 9);
+  font-weight: 100;
+  text-decoration: none;
+}
+
+.top-area-container .checking-cart a:hover {
+  color: rgb(80, 237, 104);
+}
+
+.bottom-area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.bottom-area .bt-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 2px;
+  max-height: 2em;
+  padding: 0 3em;
+  box-shadow:
+    0 2px 4px 0 rgba(90, 87, 87, 0.2),
+    0 6px 20px 0 rgba(108, 105, 105, 0.19);
+    object-fit: fill;
+}
+
+.bottom-area .breadcrumb {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.category-container{
+  font-size: 1.2em;
+  font-weight: 1000;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bottom-area ul li {
+  list-style: none;
+  flex: 1;
+  padding: 0.2em 0;
+  margin: 0 0;
+}
+
+.img-container {
+  display: flex;
+  align-items: start;
+  justify-items: start;
+  gap: 2px;
+}
+
+.img-container .img-content img {
+  width: 24px;
+  height: 24px;
+  padding: 0 0;
+}
+
+.img-container .policy-label {
+  font-size: small;
+}

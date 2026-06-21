@@ -1,0 +1,85 @@
+.orderInfor-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1em;
+  gap: 1em;
+}
+
+.order-summary-block {
+  display: block;
+  padding: 2em 1em;
+  box-shadow:
+    0 2px 4px 0 rgba(90, 87, 87, 0.2),
+    0 6px 20px 0 rgba(108, 105, 105, 0.19);
+}
+
+.order-summary-block p {
+  font-size: larger;
+  font-weight: 800;
+}
+
+.order-summary-block .total-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-summary-block p,
+.order-summary-block .total-price {
+  border-bottom: 1px solid gray;
+}
+
+.order-summary-block .total-price .total-price-label {
+  font-size: medium;
+  font-weight: 800;
+}
+
+.order-summary-block .total-price .price {
+  font-size: large;
+  color: red;
+}
+
+.order-summary-block .total-price .price .up,
+.alert-order span .up {
+  font-size: smaller;
+  vertical-align: super;
+}
+
+.order-summary-block .summary-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.order-summary-block .summary-action li {
+  font-size: smaller;
+  font-weight: 150;
+  color: grey;
+}
+
+.order-summary-block .summary-action button {
+  width: 100%;
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+.alert-order {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 1em;
+  background-color: #d9edf7;
+  box-shadow:
+    0 2px 4px 0 rgba(97, 153, 152, 0.2),
+    0 6px 20px 0 rgba(108, 105, 105, 0.19);
+}
+
+.alert-order span:first-child {
+  font-size: medium;
+  font-weight: 500;
+}
+
+.alert-order span:nth-child(2) {
+  font-size: small;
+  font-weight: 150;
+}

@@ -1,0 +1,121 @@
+.login-form{
+    box-sizing: border-box;
+    border: 1px solid rgb(235, 206, 206);
+    box-shadow: 0 0 8px 0 rgba(90, 87, 87, 0.2), 0 6px 20px 0 rgba(108, 105, 105, 0.19);
+    position: relative;
+    margin: 10px 5px;
+    padding: 15px;
+    background-color: white;
+}
+
+.hiding-btn{
+    padding: 1px 1px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.hiding-btn:hover{
+    background-color: black;
+    color: white;
+}
+
+
+.login-container{
+    width: 100%;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.login-container .title .lg-title{
+    color: black;
+    font-size: 20px;
+    font-weight: 1000;
+    text-align: center;
+    caret-color: transparent;
+}
+
+.login-container .container-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sign-in-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sign-in-container input, .sign-in-container .submit{
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid grey;
+}
+
+.sign-in-container .submit{
+    background-color: rgb(13, 110, 245);
+    color: white;
+}
+
+.divider{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.divider span{
+    text-align: center;
+    z-index: 1;
+    background-color: white;
+}
+
+.divider .line::before,
+.divider .line::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.divider .line::before{
+    left: 0;
+}
+
+.divider .line::after{
+    right: 0;
+}
+
+.gg-login, .github-login, .fb-login{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 8px;
+    gap: 10px;
+    color: aliceblue;
+    
+}
+
+.gg-login{
+    background-color: rgb(190, 17, 17);
+}
+
+.github-login{
+     background-color: rgb(110, 13, 121);
+}
+
+.fb-login{
+    background-color: rgb(33, 77, 233);
+}
