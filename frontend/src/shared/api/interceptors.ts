@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import api from "../../modules/auth/api/axiosClient";
 import { useAuthStore } from "../../modules/auth/store/AuthStore";
-import { startsWith } from "zod";
 
 export function setInterceptors() {
   api.interceptors.request.use((config) => {

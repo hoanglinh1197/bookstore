@@ -6,7 +6,8 @@ import AuthLogin from '../../modules/auth/hooks/AuthLogin';
 import HomePage from '../../pages/home/HomePage';
 import PaymentPage from '../../pages/payment/PaymentPage';
 import HistoryOrderPage from '../../pages/order/HistoryOrderPage';
-import OrderDetail from '../../pages/order/OrderDetailPage';
+import HistoryOrder from '../../pages/order/HistoryOrder';
+import OrderDetail from '../../pages/order/OrderDetail';
 
 const router = createBrowserRouter(
     [
@@ -17,8 +18,13 @@ const router = createBrowserRouter(
                 {index:true, element: <HomePage/>},
                 {path:'productDetail/:id', element: <BookDetailPage/>},
                 { path: 'shoppingCart', element: <ShoppingCartPage /> },
-                { path: 'historyOrder', element: <HistoryOrderPage /> },
-                { path: 'orderDetail', element: <OrderDetail /> },
+                {
+                    path: 'historyOrder', element: <HistoryOrderPage />
+                    , children: [
+                        { index: true, element: <HistoryOrder /> },
+                        {path:'orderDetail', element: <OrderDetail/>}
+                    ]
+                },
                 { path: 'auth/success', element: <AuthLogin /> }]
         },
         {

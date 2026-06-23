@@ -1,8 +1,8 @@
 .order-item-content{
     display: grid;
-    grid-template-columns: 10fr 1fr 1fr;
+    grid-template-columns: 10fr 1.5fr 1.5fr;
     justify-content: center;
-    border: 1px solid rgb(250, 245, 245);
+    border: 1px solid white;
 }
 
 .order-item-content .order-book-img-container{

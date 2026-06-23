@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 3fr 1fr;
   padding: 1em 5em;
+  padding-top:5em;
 }
 
 .left .mainCart-detail {

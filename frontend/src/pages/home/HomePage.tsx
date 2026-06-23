@@ -22,7 +22,7 @@ function HomePage() {
         </div>
         <div className="hp-bottom">
           <div className="main-slider">
-            <Slider content={books}></Slider>
+            <Slider content={books} title="Sản phẩm khuyến mãi"></Slider>
           </div>
           <div className="book-slider">
             <BookSlider

@@ -209,9 +209,10 @@
 .nav-link li:hover {
   opacity: 0.8;
 }
-
+.search-result .selected-button,
 .search-result .number,
 .search-result .error-quantity,
-.search-result .label-check{
+.search-result .label-check,
+.search-result .delete-container{
   display: none !important;
 }

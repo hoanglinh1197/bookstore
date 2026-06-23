@@ -13,3 +13,14 @@
     justify-content: space-between;
     gap: 2em;
 }
+
+.product-detail-container .book-slider .circle-wrapper,
+.product-detail-container .book-slider .discount-time{
+    display: none;
+}
+
+.product-detail-container .book-slider .slider-container{
+    padding: 1em 1em !important;
+    background: rgb(200, 195, 195);
+
+}

@@ -10,16 +10,16 @@ import deliverly3 from "../../../assets/img/product_deliverly_3_ico.png";
 import deliverly4 from "../../../assets/img/product_deliverly_4_ico.png";
 import deliverly5 from "../../../assets/img/product_deliverly_5_ico.png";
 import deliverly6 from "../../../assets/img/product_deliverly_6_ico.png";
-
-
-
+import type { BookType } from "../../../modules/book/type/Book.type";
+import { createPortal } from "react-dom";
+import AddToCartToast from "../addToCartToast/AddToCartToast";
 
 function ProductDetail() {
   const [quantity, setQuantity] = useState(1);
   const { id } = useParams();
   const productId = Number(id);
   const { data, isLoading } = useBook(productId);
-
+  const [toasts, setToasts] = useState<BookType[]>([]);
   const addToCart = useCartStore((func) => func.addToCart);
 
   const decrease = () => {
@@ -34,6 +34,20 @@ function ProductDetail() {
     }
   };
 
+  const handleAddBook = () => {
+    if (data) {
+      addToCart({
+        id: data.id,
+        name: data.name,
+        price: data.price,
+        discountPrice: data.price * 0.8,
+        quantity: quantity,
+        imgSrc: data.imgSrc,
+        discount: data.discount,
+      });
+      setToasts((prev) => [...prev, data]);
+    }
+  };
 
   // Them book vao gio hang va cap nhat gio hang
   // Them thanh cong -> hien thi addToCartToast o giuwa man hinh canh ben phai
@@ -42,22 +56,19 @@ function ProductDetail() {
     // goi addToCart roi redirect toi gio hang
   };
 
-  return !data ? ( <div>....Error</div>) : (
+  return !data ? (
+    <div>....Error</div>
+  ) : (
     <>
       <div className="pr-dt-wrapper">
         <div className="pr-dt-container">
           <div className="pr-dt-inf">
             <div className="pr-dt-img">
-              <img
-                src={data?.imgSrc}
-                alt=""
-              />
+              <img src={data?.imgSrc} alt="" />
             </div>
             <div className="area-inf">
               <div className="pr-inf">
-                <p className="pr-title">
-                  {data?.name}
-                </p>
+                <p className="pr-title">{data?.name}</p>
                 <div className="status">
                   <p className="inf pr-status">
                     Tình trạng:
@@ -65,11 +76,14 @@ function ProductDetail() {
                   </p>
                   <p className="inf pr-brand">
                     Thương hiệu:
-                    <span className="result pr-brand-rs">{data.distributor}</span>
+                    <span className="result pr-brand-rs">
+                      {data.distributor}
+                    </span>
                   </p>
                 </div>
                 <p className="inf author">
-                  Tác giả: <span className="result pr-status-rs">{data.author}</span>
+                  Tác giả:{" "}
+                  <span className="result pr-status-rs">{data.author}</span>
                 </p>
                 <p className="inf translater">
                   Người dịch:
@@ -77,25 +91,33 @@ function ProductDetail() {
                 </p>
                 <p className="inf prod">
                   Công ty phát hành:
-                  <span className="result pr-producer-rs">{data.publisher}</span>
+                  <span className="result pr-producer-rs">
+                    {data.publisher}
+                  </span>
                 </p>
                 <p className="inf pages">
-                  Số trang: <span className="result pr-status-rs">{data.pageCount}</span>
+                  Số trang:{" "}
+                  <span className="result pr-status-rs">{data.pageCount}</span>
                 </p>
                 <p className="inf cover-design">
                   Hình thức bìa:{" "}
-                  <span className="result pr-status-rs">{ data.coverType}</span>
+                  <span className="result pr-status-rs">{data.coverType}</span>
                 </p>
                 <p className="inf weight">
-                  Trọng lượng: <span className="result pr-status-rs">{data.weight}</span>
+                  Trọng lượng:{" "}
+                  <span className="result pr-status-rs">{data.weight}</span>
                 </p>
               </div>
               <div className="pr-flex-wrap">
                 <div className="wrapbox-detail">
                   <div className="price">
                     <span className="price-title">Giá: </span>
-                    <span className="new-price">{(data.price/2).toLocaleString()}₫</span>
-                    <span className="old-price">{ data.price.toLocaleString()}₫</span>
+                    <span className="new-price">
+                      {(data.price / 2).toLocaleString()}₫
+                    </span>
+                    <span className="old-price">
+                      {data.price.toLocaleString()}₫
+                    </span>
                     <span className="discount">-50%</span>
                   </div>
                   <div className="quantity">
@@ -111,24 +133,14 @@ function ProductDetail() {
                     </div>
                   </div>
                   <div className="wrapbox-delivery">
-                    { data &&
+                    {data && (
                       <button
                         className="adding-product-btn"
-                        onClick={() =>
-                          addToCart({
-                            id: data.id,
-                            name: data.name,
-                            price: data.price,
-                            discountPrice: data.price * 0.8,
-                            quantity: quantity,
-                            imgSrc: data.imgSrc,
-                            discount: data.discount
-                          })
-                        }
+                        onClick={() => handleAddBook()}
                       >
                         THÊM VÀO GIỎ
                       </button>
-                    }
+                    )}
                     <button className="buying-btn" onClick={buy}>
                       MUA NGAY
                     </button>
@@ -194,6 +206,27 @@ function ProductDetail() {
             </div>
           </div>
         </div>
+        {createPortal(
+          toasts.map((toast) => (
+            <div
+              key={toast.id}
+              className="cart-toast"
+              onAnimationEnd={() => {
+                setToasts((prev) => prev.filter((t) => t.id !== toast.id));
+              }}
+            >
+              <AddToCartToast
+                id={data.id}
+                name={data.name}
+                imgSrc={data.imgSrc}
+                discount={data.discount}
+                discountPrice={data.discountPrice}
+                price={data.price}
+              ></AddToCartToast>
+            </div>
+          )),
+          document.body,
+        )}
       </div>
     </>
   );

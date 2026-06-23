@@ -5,7 +5,7 @@ const createOrderApi = "/orders";
 const ordersApi = (shippingStatus : string) => `/orders?shippingStatus=${shippingStatus}`;
 // const updateOrderApi =  (id: number) : string => `/orders?id=${id}`;
 // const deleteOrderApi = (id: number) : string => `/orders?id=${id}`;
-
+const orderApi = (orderCode: string): string => `/orders/order?orderCode=${orderCode}`;
 
 export const createOrder = (order : OrderType) => {
   return api.post(createOrderApi, order, {
@@ -18,6 +18,12 @@ export const fetchOrders = () => {
     withCredentials: true,
   }
   )
+}
+
+export const fetchOrder = (orderCode: string) => {
+  return api.get(orderApi(orderCode), {
+     withCredentials: true,
+  })
 }
 
 export const fetchOrdersByStatusOrder = (shippingStatus: string) => {

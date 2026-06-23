@@ -12,13 +12,15 @@ type Params = {
   cartItem: CartItem;
   isEnabbeldCheckbox?: boolean;
   setAllChecked?: Function;
+  setSearchInput?: Function;
 };
 function LineItem(params: Params) {
+  if (params.setSearchInput) params.setSearchInput();
   const [isChecked, setChecked] = useState(false);
   const addToCart = useCartStore((state) => state.addToCart);
   const removeFromCart = useCartStore((state) => state.removeFromCart);
   const deleteBookFromCart = useCartStore((state) => state.deleteBook)
-
+  
   const schema = validateCartSchema(params.cartItem.id);
 
   type FormData = {
@@ -71,7 +73,7 @@ function LineItem(params: Params) {
 
   useEffect(() => {
     trigger("quantity");
-    if (params.isEnabbeldCheckbox) setChecked(params.isEnabbeldCheckbox);
+    if (params.isEnabbeldCheckbox !== undefined) setChecked(params.isEnabbeldCheckbox);
   }, [trigger, params.isEnabbeldCheckbox]);
   return (
     <>

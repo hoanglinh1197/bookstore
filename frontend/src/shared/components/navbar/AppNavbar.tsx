@@ -78,6 +78,7 @@ function AppNavbar() {
                       <LineItem
                         key={book.id}
                         cartItem={book}
+                        setSearchInput={() => setSearchInput("")}
                       ></LineItem>
                     ))}
                   </div>

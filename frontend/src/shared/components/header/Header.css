@@ -74,11 +74,11 @@
   margin: 0 0;
 }
 
-.img-container {
+.box-item .img-container {
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-items: start;
-  gap: 2px;
+  gap: 5px;
 }
 
 .img-container .img-content img {
@@ -89,4 +89,5 @@
 
 .img-container .policy-label {
   font-size: small;
+  min-width: 0;
 }

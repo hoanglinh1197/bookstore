@@ -6,6 +6,7 @@ import { useRef, useState } from "react";
 
 interface ChildProps{
   content: BookType[] | undefined;
+  title: string;
 }
 
 const Slider = (data: ChildProps) => {
@@ -44,7 +45,7 @@ const Slider = (data: ChildProps) => {
                   <div className="inner-circle"></div>
                 </div>
                 <div>
-                  <p>SẢN PHẨM KHUYÊN MÃI</p>
+                  <p>{data.title}</p>
                 </div>
               </div>
               <div className="discount-time">

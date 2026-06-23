@@ -6,17 +6,20 @@ import type { HistoryOrderType } from "../../../modules/order/type/order.type";
 import { useCartStore } from "../../../modules/cart/store/CartStore";
 import { useNavigate } from "react-router-dom";
 
-function Order(historyOrders: HistoryOrderType) {
+type Params = {
+  historyOrders: HistoryOrderType,
+} 
+
+function Order(params : Params ) {
   const [isShowMore, setIsShowMore] = useState(false);
 
-  const length = historyOrders.carts ? historyOrders.carts.length : 0;
+  const length = params.historyOrders.carts ? params.historyOrders.carts.length : 0;
   const addToCart = useCartStore((c) => c.addToCart);
   const navigate = useNavigate();
-  const showMore = () => {};
 
   const buyAgain = () => {
     // Add vao gio hang - > chuyen huong sang dat hang voi dia chi co san
-    historyOrders.carts.map((order) => {
+    params.historyOrders.carts.map((order) => {
       addToCart({
         id: order.id,
 
@@ -37,43 +40,22 @@ function Order(historyOrders: HistoryOrderType) {
   };
 
   const showDetail = () => {
-    //
-    navigate("/orderDetail", {
+    navigate("/historyOrder/orderDetail", {
       state: {
-        orderCode: historyOrders.orderCode,
-
-        orderStatus: historyOrders.orderStatus,
-
-        carts: historyOrders.carts,
-
-        address: historyOrders.address,
-
-        phone: historyOrders.phone,
-
-        shippingFee: historyOrders.shippingFee,
-
-        shippingMethod: historyOrders.shippingMethod,
-
-        paymentMethod: historyOrders.paymentMethod,
-
-        createDate: historyOrders.createDate,
-
-        productDiscountAmount: historyOrders.productDiscountAmount,
-
-        finalTotalPrice: historyOrders.finalTotalPrice,
+        orderCode: params.historyOrders.orderCode
       },
     });
   };
 
   return (
     <>
-      {historyOrders && (
+      {params.historyOrders && (
         <div className="order-item-container">
           <div className="order-status">
             <div className="cancel-order-container">
               <Ban size={15} className="x-circle-fill-icon" />
               <span className="cancel-order-title">
-                {historyOrders.orderStatus}
+                {params.historyOrders.orderStatus}
               </span>
             </div>
           </div>
@@ -85,14 +67,14 @@ function Order(historyOrders: HistoryOrderType) {
           })
         } */}
           <OrderItem
-            name={historyOrders.carts[0].name}
-            id={historyOrders.carts[0].id}
-            discount={historyOrders.carts[0].discount}
-            discountPrice={historyOrders.carts[0].discountPrice}
-            imgSrc={historyOrders.carts[0].imgSrc}
-            price={historyOrders.carts[0].price}
-            quantity={historyOrders.carts[0].quantity}
-            distributor={historyOrders.carts[0].distributor}
+            name={params.historyOrders.carts[0].name}
+            id={params.historyOrders.carts[0].id}
+            discount={params.historyOrders.carts[0].discount}
+            discountPrice={params.historyOrders.carts[0].discountPrice}
+            imgSrc={params.historyOrders.carts[0].imgSrc}
+            price={params.historyOrders.carts[0].price}
+            quantity={params.historyOrders.carts[0].quantity}
+            distributor={params.historyOrders.carts[0].distributor}
           ></OrderItem>
           {length > 1 ? (
             <div className="more-book-container">
@@ -107,7 +89,7 @@ function Order(historyOrders: HistoryOrderType) {
             <div className="order-total-price">
               <span className="total-price-title">Tổng tiền:</span>
               <span className="total-price">
-                {historyOrders.finalTotalPrice.toLocaleString()}
+                {params.historyOrders.finalTotalPrice.toLocaleString()}
                 <sup>đ</sup>
               </span>
             </div>

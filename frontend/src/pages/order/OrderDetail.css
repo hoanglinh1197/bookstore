@@ -1,0 +1,132 @@
+.order-detail-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em 5em;
+    width: 100%;
+
+}
+
+.text{
+    font-size: smaller;
+}
+
+.order-detail-title-container{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.order-date-container{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.order-date-container .order-date{
+    font-size: medium;
+    color: grey;
+}
+
+.order-detail-user-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    gap: 1em;
+}
+
+
+.address-container,
+.shipping-type-container,
+.payment-type-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px 10px;
+    background-color: white;
+}
+
+.address-container .order-detail-address-title,
+.shipping-type-container .order-detail-shipping-type-title,
+.payment-type-container .order-detail-payment-type-title{
+    font-size: large;
+}
+
+.address-container .order-detail-address-detail,
+.shipping-type-container .order-detail-shipping-type-wrapper,
+.payment-type-container .order-detail-payment-type-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 5px;
+    background-color: white;
+}
+
+.shipping-type-container .order-detail-shipping-type-wrapper span,
+.address-container .order-detail-address-detail span,
+.payment-type-container .order-detail-payment-type-wrapper span{
+    display: inline-block;
+    overflow-wrap: anywhere;
+
+}
+
+.order-items-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: white;
+    width: 100%;
+    padding: 1em 5px
+}
+
+.order-items-container .order-items-columnn-title{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 10fr 1.5fr 1.5fr;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.order-items-container .order-items-columnn-title p {
+    font-size: medium;
+}
+
+.order-items-container .order-total-price-container .order-total-price,
+.order-items-container .order-total-price-container .more-infomation{
+    display: none !important;
+}
+
+.order-detail-fee-container{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+}
+
+.order-detail-fee-container .order-detail-fee-left,
+.order-detail-fee-container .order-detail-fee-right{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.order-detail-fee-container .order-detail-fee-left span{
+    color: grey;
+    font-size: small;
+}
+
+.order-detail-fee-container .order-detail-fee-right span{
+    color: grey;
+    font-size: small;
+}
+
+.order-detail-fee-container .order-detail-fee-right .total-price-fee{
+    font-size: larger;
+    color: red;
+}
+
+.back-to-previous-container .back-to-previous{
+    color: rgb(14, 140, 244);
+    cursor: pointer;
+}

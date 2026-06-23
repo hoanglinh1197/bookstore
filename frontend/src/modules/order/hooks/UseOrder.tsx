@@ -1,6 +1,6 @@
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { createOrder } from "../api/OrderApi";
-import { getOrdersByStatusOrder } from "../service/OrderService";
+import { getOrder, getOrdersByStatusOrder } from "../service/OrderService";
 
 export const useCreateOrder = () => {
   return useMutation({
@@ -15,6 +15,16 @@ export const useOrders = (shippingStatus: string) => {
     enabled: true
   })
 }
+
+export const useOrder = (orderCode: string) => {
+  return useQuery({
+    queryKey: ["order", orderCode],
+    queryFn: () => getOrder(orderCode),
+    enabled: true
+  })
+}
+
+
 // export const updateOrder = async (order: Order) => {
 //   const response = await api.put(`/orders/${order.}`, order);
 //   return response.data;
