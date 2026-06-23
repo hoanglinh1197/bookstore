@@ -50,9 +50,8 @@ Người dùng có thể thực hiện:
 
 ## Frontend
 
-- React
+- React (Router, Tanstack query, Zod, React hook form)
 - TypeScript
-- React Router
 - Axios
 - Bootstrap icons
 - HTML & CSS
